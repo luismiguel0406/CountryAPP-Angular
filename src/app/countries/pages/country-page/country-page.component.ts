@@ -23,7 +23,7 @@ export class CountryPageComponent implements OnInit{
   ngOnInit(): void {
     this.activatedRoute.params
     .pipe(
-      //Recibe lo sparametros anteriores, en este caso , los param
+      //Recibe los parametros anteriores, en este caso , los param
       switchMap( ({id}) =>this.countriesService.searchByAlphaCode(id))
     ).subscribe(
         country =>{
